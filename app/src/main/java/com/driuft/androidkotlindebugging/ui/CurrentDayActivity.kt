@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.driuft.androidkotlindebugging.R
 import java.util.*
 
+
 class CurrentDayActivity : AppCompatActivity() {
 
     private lateinit var currentDayText: TextView
@@ -16,10 +17,11 @@ class CurrentDayActivity : AppCompatActivity() {
         setContentView(R.layout.activity_current_day)
 
         currentDayText = findViewById(R.id.current_day_text)
-        currentDayText.text = getString(getDayOfMonth())
+        currentDayText.text = getDayOfMonth().toString()
     }
 
     private fun getDayOfMonth(): Int {
+
         return cal.get(Calendar.DAY_OF_MONTH)
     }
 }
